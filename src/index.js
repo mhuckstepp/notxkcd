@@ -4,11 +4,10 @@ import App from "./App";
 import { createStore, applyMiddleware } from "redux";
 import { comicReducer } from "./reducers";
 import { Provider } from "react-redux";
-import logger from "redux-logger";
 import thunk from "redux-thunk";
 import "./index.css";
 
-let store = createStore(comicReducer, applyMiddleware(thunk, logger));
+let store = createStore(comicReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>

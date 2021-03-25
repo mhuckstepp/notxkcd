@@ -23,7 +23,6 @@ const GetComicForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(number);
     history.push(`/${number}`);
   };
 

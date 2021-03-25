@@ -23,7 +23,6 @@ const FullComic = () => {
   };
 
   useEffect(() => {
-    console.log(comics.filter((comic) => Number(comic.num) === num));
     setSelectComic(comics.filter((comic) => Number(comic.num) === num));
   }, [num, comics]);
 
