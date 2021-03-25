@@ -1,10 +1,8 @@
 import Comics from "./components/Comics";
 import FullComic from "./components/FullComic";
 import GetComicForm from "./components/GetComicForm";
-
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import FaviAnimation from "./actions/faviAnimation";
 
 function App() {
   return (
