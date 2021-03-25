@@ -70,7 +70,7 @@ const FullComic = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center w-full ">
+      <div className="flex flex-col items-center w-full text-center">
         <div className="flex mt-8 mb-5">
           <button
             className="bg-gradient-to-r mr-12 p-4 from-gray-500 rounded font-bold"
@@ -87,7 +87,7 @@ const FullComic = () => {
         </div>
         <h1 className="text-5xl mb-8">{title}</h1>
         <img className="max-w-screen-xl max-h-screen" src={img} alt={alt} />
-        <p className="text-2xl mt-16 w-9/12">{alt}</p>
+        <p className="text-2xl mt-16 w-7/12">{alt}</p>
         <p className="text-l my-4"># {num}</p>
 
         {/* {selectComic.comments &&
