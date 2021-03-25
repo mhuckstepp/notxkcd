@@ -4,11 +4,23 @@ import {
   FETCH_START,
   ADD_COMMENT,
 } from "../actions";
+import { jsonObjAll } from "../actions/data";
+
+let randOneInit = Math.ceil(Math.random() * jsonObjAll.length);
+let randTwoInit = Math.ceil(Math.random() * jsonObjAll.length);
+let randThreeInit = Math.ceil(Math.random() * jsonObjAll.length);
+let randFourInit = Math.ceil(Math.random() * jsonObjAll.length);
 
 const initialState = {
-  comics: [],
+  comics: jsonObjAll,
   isFetching: false,
   err: "",
+  showedComics: [
+    jsonObjAll[randOneInit],
+    jsonObjAll[randTwoInit],
+    jsonObjAll[randThreeInit],
+    jsonObjAll[randFourInit],
+  ],
 };
 
 export const comicReducer = (state = initialState, action) => {
@@ -19,9 +31,21 @@ export const comicReducer = (state = initialState, action) => {
         isLoading: true,
       };
     case FETCH_SUCCESS:
+      let randOne = Math.ceil(Math.random() * state.comics.length);
+      let randTwo = Math.ceil(Math.random() * state.comics.length);
+      let randThree = Math.ceil(Math.random() * state.comics.length);
+      let randFour = Math.ceil(Math.random() * state.comics.length);
+      console.log(randOne, randThree, randFour);
+      let res = [
+        state.comics[randOne],
+        state.comics[randTwo],
+        state.comics[randThree],
+        state.comics[randFour],
+      ];
+      console.log(res);
       return {
         ...state,
-        comics: [...state.comics, ...action.payload],
+        showedComics: [...state.showedComics, ...res],
         isLoading: false,
         error: "",
       };

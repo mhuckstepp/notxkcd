@@ -28,7 +28,7 @@ const GetComicForm = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center mb-6">
+    <div className=" flex flex-col items-center mb-6 mr-2">
       <p>Jump to comic by #</p>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input

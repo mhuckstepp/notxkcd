@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import { fetchComics } from "../actions";
 import { useSelector, useDispatch } from "react-redux";
 import Comic from "./Comic";
@@ -8,11 +8,12 @@ const Comics = () => {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchComics());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchComics());
+  // }, [dispatch]);
 
   function fetchMore() {
+    console.log("run fetchmore");
     dispatch(fetchComics());
   }
 
@@ -23,13 +24,13 @@ const Comics = () => {
         {state.error && <div>"ERROR WHILE LOADING"</div>}
 
         <InfiniteScroll
-          dataLength={state.comics.length}
+          dataLength={state.showedComics.length}
           next={() => fetchMore()}
           hasMore={true}
           loader={<h4>Loading...</h4>}
         >
-          {state.comics.map((comic) => {
-            return <Comic comic={comic} key={comic.title} />;
+          {state.showedComics.map((comic) => {
+            return <Comic comic={comic} key={comic.num} />;
           })}
         </InfiniteScroll>
       </div>

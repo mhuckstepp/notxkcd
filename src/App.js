@@ -11,14 +11,14 @@ function App() {
         <div className="flex flex-col justify-start items-center  ">
           <div className=" flex justify-between w-full bg-gradient-to-r from-yellow-200 via-red-200 to-pink-200  rounded shadow-xl h-1/6">
             <Link to="/">
-              <p className="underline inline font-black text-lg">Go Home</p>
+              <p className="underline inline font-black text-lg m-2">Go Home</p>
             </Link>
             <h1 className="text-8xl self-center ml-40 "> xkcd comics</h1>
             <GetComicForm />
           </div>
-          {/* <FaviAnimation /> */}
-          <Route path="/:num" component={FullComic} />
           <Route exact path="/" component={Comics} />
+          <Route path="/:num" component={FullComic} />
+          {/* <FaviAnimation /> */}
         </div>
       </Switch>
     </Router>
