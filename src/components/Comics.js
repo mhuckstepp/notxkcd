@@ -13,7 +13,6 @@ const Comics = () => {
   // }, [dispatch]);
 
   function fetchMore() {
-    console.log("run fetchmore");
     dispatch(fetchComics());
   }
 

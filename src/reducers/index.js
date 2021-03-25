@@ -35,14 +35,12 @@ export const comicReducer = (state = initialState, action) => {
       let randTwo = Math.ceil(Math.random() * state.comics.length);
       let randThree = Math.ceil(Math.random() * state.comics.length);
       let randFour = Math.ceil(Math.random() * state.comics.length);
-      console.log(randOne, randThree, randFour);
       let res = [
         state.comics[randOne],
         state.comics[randTwo],
         state.comics[randThree],
         state.comics[randFour],
       ];
-      console.log(res);
       return {
         ...state,
         showedComics: [...state.showedComics, ...res],
