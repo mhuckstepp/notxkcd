@@ -1,4 +1,4 @@
-# A fun project for a new way to read xkcd comics.
+# A fun project for a new way to read xkcd comics
 
 Loads random xkcd comics and allows for infinite scroll. jump to any # comic.
 
