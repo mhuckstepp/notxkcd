@@ -10,7 +10,7 @@ const Comics = () => {
 
   useEffect(() => {
     dispatch(fetchComics());
-  }, []);
+  }, [dispatch]);
 
   function fetchMore() {
     dispatch(fetchComics());
