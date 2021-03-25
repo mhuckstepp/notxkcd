@@ -3,6 +3,7 @@ import {
   FETCH_FAIL,
   FETCH_START,
   ADD_COMMENT,
+  SEARCH_COMICS,
 } from "../actions";
 import { jsonObjAll } from "../actions/data";
 
@@ -52,6 +53,13 @@ export const comicReducer = (state = initialState, action) => {
         ...state,
         isLoading: false,
         error: action.payload,
+      };
+    case SEARCH_COMICS:
+      return {
+        ...state,
+        showedComics: state.comics.filter((comic) => {
+          return comic.title.toLowerCase().includes(action.payload);
+        }),
       };
     case ADD_COMMENT:
       return {

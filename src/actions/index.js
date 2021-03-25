@@ -3,6 +3,7 @@ export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAIL = "FETCH_FAIL";
 export const FETCH_START = "FETCH_START";
 export const ADD_COMMENT = "ADD_COMMENT";
+export const SEARCH_COMICS = "SEARCH_COMICS";
 
 // export const fetchComics = () => {
 //   // assumes a new comic every 3 days and adds the number to potential list
@@ -49,4 +50,8 @@ export const fetchComics = () => {
 
 export const addComment = (comment, num) => {
   return { type: ADD_COMMENT, payload: { comment: comment, num: num } };
+};
+
+export const searchComics = (search) => {
+  return { type: SEARCH_COMICS, payload: search.toLowerCase() };
 };

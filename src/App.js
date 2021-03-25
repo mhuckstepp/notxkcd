@@ -1,8 +1,9 @@
 import Comics from "./components/Comics";
 import FullComic from "./components/FullComic";
-import GetComicForm from "./components/GetComicForm";
+import GetComicByNumForm from "./components/GetComicByNumForm";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import FilterComics from "./components/FilterComics";
 
 function App() {
   return (
@@ -13,8 +14,11 @@ function App() {
             <Link to="/">
               <p className="underline inline font-black text-lg m-2">Go Home</p>
             </Link>
-            <h1 className="text-8xl self-center ml-40 "> xkcd comics</h1>
-            <GetComicForm />
+            <h1 className="text-8xl self-center ml-36 "> xkcd comics</h1>
+            <div className=" flex flex-col justify-center">
+              <FilterComics />
+              <GetComicByNumForm />
+            </div>
           </div>
           <Route exact path="/" component={Comics} />
           <Route path="/:num" component={FullComic} />

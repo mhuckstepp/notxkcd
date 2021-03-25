@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
-const GetComicForm = () => {
+const GetComicByNumForm = () => {
   let history = useHistory();
   const [number, setNumber] = useState("");
   const [error, setError] = useState(false);
@@ -51,4 +51,4 @@ const GetComicForm = () => {
   );
 };
 
-export default GetComicForm;
+export default GetComicByNumForm;
