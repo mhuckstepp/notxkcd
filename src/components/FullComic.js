@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 // import { addComment } from "../actions";
 import axios from "axios";
@@ -28,7 +28,7 @@ const FullComic = () => {
     if (comics.length > 0 && comics.map((comic) => comic.num).includes(num)) {
       console.log(num);
       comics.forEach((comic) => {
-        if (comic.num == num) {
+        if (Number(comic.num) === Number(num)) {
           setSelectComic(comic);
         }
       });
