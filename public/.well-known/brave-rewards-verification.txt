@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: notxkcd.vercel.app
+Token: 3d3280a10e1280c0488c235897fcce682945b0fc7ae4ea4a2e4e241caaca4a54
