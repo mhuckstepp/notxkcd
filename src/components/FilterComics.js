@@ -10,14 +10,6 @@ const FilterComics = () => {
 
   const changeHandler = async (e) => {
     setSearch(e.target.value);
-    if (search.length > 2) {
-      console.log("run if search", search);
-      dispatch(searchComics(search));
-      setSearched(true);
-    } else if (search.length < 3 && searched) {
-      dispatch(fetchComics());
-      setSearched(false);
-    }
   };
 
   useEffect(() => {
@@ -26,7 +18,7 @@ const FilterComics = () => {
       dispatch(searchComics(search));
       setSearched(true);
     } else if (search.length < 3 && searched) {
-      dispatch(fetchComics());
+      dispatch(fetchComics);
       setSearched(false);
     }
   }, [search, dispatch, searched]);

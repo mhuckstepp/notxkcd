@@ -7,7 +7,7 @@ const Comic = (props) => {
   return (
     <div>
       <Link to={`/${comic.num}`}>
-        <div className=" rounded bg-white shadow m-8 p-8 flex flex-col items-center max-w-screen-xl">
+        <div className=" rounded bg-white shadow m-8 p-8 flex flex-col items-center text-center max-w-screen-xl">
           <h2 className="text-4xl mb-8">{comic.title}</h2>
           <p className="text-l mb-4"># {comic.num}</p>
 

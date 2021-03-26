@@ -26,7 +26,7 @@ const Comics = () => {
           dataLength={state.showedComics.length}
           next={() => fetchMore()}
           hasMore={true}
-          loader={<h4>Loading...</h4>}
+          loader={<h4>...</h4>}
         >
           {state.showedComics.map((comic) => {
             return <Comic comic={comic} key={comic.num} />;
