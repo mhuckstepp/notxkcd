@@ -18,7 +18,8 @@ const FilterComics = () => {
       dispatch(searchComics(search));
       setSearched(true);
     } else if (search.length < 3 && searched) {
-      dispatch(fetchComics);
+      console.log("else if search", search);
+      dispatch(fetchComics());
       setSearched(false);
     }
   }, [search, dispatch, searched]);
