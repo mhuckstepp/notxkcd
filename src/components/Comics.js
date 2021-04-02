@@ -18,7 +18,7 @@ const Comics = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center ">
+      <div className="flex flex-col items-center border-2 border-black w-4/5 m-auto ">
         {state.isLoading && <div>"LOADING...."</div>}
         {state.error && <div>"ERROR WHILE LOADING"</div>}
 

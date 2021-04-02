@@ -14,11 +14,11 @@ const FilterComics = () => {
 
   useEffect(() => {
     if (search.length > 2) {
-      console.log("run if search", search);
+      // console.log("run if search", search);
       dispatch(searchComics(search));
       setSearched(true);
     } else if (search.length < 3 && searched) {
-      console.log("else if search", search);
+      // console.log("else if search", search);
       dispatch(fetchComics());
       setSearched(false);
     }

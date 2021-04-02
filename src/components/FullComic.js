@@ -26,67 +26,27 @@ const FullComic = () => {
     setSelectComic(comics.filter((comic) => Number(comic.num) === num));
   }, [num, comics]);
 
-  // useEffect(() => {
-  //   // Checks comics array is populated and includes the number we are looking for.
-  //   if (comics.length > 0 && comics.map((comic) => comic.num).includes(num)) {
-  //     console.log(num);
-  //     comics.forEach((comic) => {
-  //       if (Number(comic.num) === Number(num)) {
-  //         setSelectComic(comic);
-  //       }
-  //     });
-  //     // if we dont find existing array we go and 'get' it
-  //   } else {
-  //     axios
-  //       .get(`http://xkcd.com/${num}/info.0.json`)
-  //       .then((res) => {
-  //         let resultObj = {
-  //           alt: res.data.alt,
-  //           img: res.data.img,
-  //           num: res.data.num,
-  //           title: res.data.title,
-  //           comments: [],
-  //         };
-  //         setSelectComic(resultObj);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   }
-  // }, [num, comics]);
-
-  // const handleChange = (e) => {
-  //   setComment(e.target.value);
-  // };
-
-  // const handleSubmit = (comment, num) => {
-  //   if (comment) {
-  //     dispatch(addComment(comment, num));
-  //     setComment("");
-  //   }
-  // };
-
   const { title, img, alt } = selectComic[0];
 
   return (
     <div>
-      <div className="flex flex-col items-center w-full text-center">
+      <div className="flex flex-col items-center text-center">
         <div className="flex mt-8 mb-5">
           <button
-            className="bg-gradient-to-r mr-12 p-4 from-gray-500 rounded font-bold"
+            className="bg-gradient-to-r mr-12 p-2 from-blue-300 rounded font-bold"
             onClick={() => handleLast()}
           >
             Previous
           </button>
           <button
-            className="bg-gradient-to-l ml-10 p-4 pl-10 from-gray-500 rounded font-bold"
+            className="bg-gradient-to-l ml-10 p-4 pl-10 from-blue-300 rounded font-bold"
             onClick={() => handleNext()}
           >
             Next
           </button>
         </div>
         <h1 className="text-5xl mb-8">{title}</h1>
-        <img className="max-w-screen-xl max-h-screen" src={img} alt={alt} />
+        <img className=" max-h-screen" src={img} alt={alt} />
         <p className="text-2xl mt-16 w-7/12">{alt}</p>
         <p className="text-l my-4"># {num}</p>
 
