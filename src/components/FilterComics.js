@@ -10,8 +10,6 @@ const FilterComics = () => {
   const [searchError, setSearchError] = useState(false);
   const dispatch = useDispatch();
 
-  console.log(showedComics);
-  console.log(showedComics.length);
   const changeHandler = async (e) => {
     setSearch(e.target.value);
   };
