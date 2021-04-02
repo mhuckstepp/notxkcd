@@ -8,17 +8,13 @@ const Comics = () => {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(fetchComics());
-  // }, [dispatch]);
-
   function fetchMore() {
     dispatch(fetchComics());
   }
 
   return (
     <div>
-      <div className="flex flex-col items-center border-2 border-black w-4/5 m-auto ">
+      <div className="flex flex-col items-center  w-4/5 m-auto ">
         {state.isLoading && <div>"LOADING...."</div>}
         {state.error && <div>"ERROR WHILE LOADING"</div>}
 

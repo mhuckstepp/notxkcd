@@ -1,25 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer utilities {
-  .btn {
-    @apply font-bold px-4 rounded;
-  }
-  .btn-blue {
-    @apply bg-blue-500 text-white;
-  }
-  .btn-blue:hover {
-    @apply bg-blue-700;
-  }
-  .btn-gray {
-    @apply bg-blue-500 text-white;
-  }
-  .btn-blue {
-    @apply bg-blue-500 text-white;
-  }
-}
-
-body {
-  background-color: #f2f2f2;
-}

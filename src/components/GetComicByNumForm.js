@@ -27,23 +27,27 @@ const GetComicByNumForm = () => {
   };
 
   return (
-    <div className=" flex flex-col items-center mb-6 mr-2">
+    <div className=" flex flex-col text-center self-center w-48 lg:m-0 ">
       <p>Jump to comic by #</p>
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
-          class="focus:ring-indigo-500 focus:border-indigo-500 block text-xl border-gray-300 rounded-md"
+          class="focus:ring-indigo-500 focus:border-indigo-500 block text-xl border-gray-300 rounded-md w-3/5 mx-auto"
           type="number"
           name="jumpToNum"
           value={number}
           onChange={changeHandler}
         ></input>
+
         {error && (
           <p className="text-red-700 text-md">
             {" "}
             # Must be 1 - {Math.ceil(2440 + comicNumEstimate)}
           </p>
         )}
-        <button className="btn btn-blue self-center my-4 ml-20 " type="submit">
+        <button
+          class="inline-block px-3 my-2 text-xs font-sm leading-6 text-center text-white uppercase transition bg-gray-300 rounded-full shadow ripple waves-light hover:shadow-lg focus:outline-none hover:bg-black"
+          type="submit"
+        >
           Jump
         </button>
       </form>

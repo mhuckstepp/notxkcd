@@ -9,16 +9,16 @@ function App() {
   return (
     <Router>
       <Switch>
-        <div className="flex flex-col justify-start items-center border-4 border-red-500 w-screen box-border">
-          <div className=" flex justify-between bg-gradient-to-r from-yellow-200 via-red-200 to-pink-200 rounded w-full shadow-xl border-4 border-blue-300">
+        <div className=" container flex flex-col justify-start items-center bg-gray-50 ">
+          <div className=" flex justify-between bg-gradient-to-r from-yellow-200 via-red-200 to-pink-200 rounded w-full shadow-xl lg:flex-col">
             <Link to="/">
               <p className="underline inline font-black text-lg m-2">Go Home</p>
             </Link>
-            <h1 className="text-8xl self-center xl:text-6xl  ml-24  text-center ">
+            <h1 className="text-8xl self-center lg:text-6xl  ml-24 lg:m-0 ">
               {" "}
               xkcd comics
             </h1>
-            <div className=" flex flex-col justify-center">
+            <div className=" flex flex-col justify-center	">
               <Route exact path="/" component={FilterComics} />
               <GetComicByNumForm />
             </div>
