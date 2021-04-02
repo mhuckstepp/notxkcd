@@ -45,10 +45,10 @@ const FullComic = () => {
             Next
           </button>
         </div>
-        <h1 className="text-5xl mb-8">{title}</h1>
+        <h1 className="text-5xl mb-8 md:text-xl">{title}</h1>
         <img className=" max-h-screen" src={img} alt={alt} />
-        <p className="text-2xl mt-16 w-7/12">{alt}</p>
-        <p className="text-l my-4"># {num}</p>
+        <p className="text-2xl mt-12 w-7/12 md:mt-4 md:text-sm">{alt}</p>
+        <p className="text-lg my-4 md:text-base"># {num}</p>
 
         {/* {selectComic.comments &&
           selectComic.comments.map((comment) => (

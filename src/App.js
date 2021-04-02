@@ -14,11 +14,11 @@ function App() {
             <Link to="/">
               <p className="underline inline font-black text-lg m-2">Go Home</p>
             </Link>
-            <h1 className="text-8xl self-center lg:text-6xl  ml-24 lg:m-0 ">
+            <h1 className="text-8xl lg:text-6xl md:text-4xl self-center  ml-24 lg:m-0 ">
               {" "}
               xkcd comics
             </h1>
-            <div className=" flex flex-col justify-center	">
+            <div className=" flex flex-col justify-center md:text-xs	">
               <Route exact path="/" component={FilterComics} />
               <GetComicByNumForm />
             </div>
