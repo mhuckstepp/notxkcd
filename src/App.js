@@ -22,7 +22,7 @@ function App() {
                   : "flex justify-between  rounded w-full shadow-xl lg:flex-col bg-gradient-to-r from-yellow-200 via-red-200 to-pink-200"
               }
             >
-              <div className="flex flex-col justify-between">
+              <div className="flex flex-col justify-between ml-2">
                 <Link to="/">
                   <p className="underline md:text-center font-black text-lg">
                     Go Home
